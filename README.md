@@ -1,1 +1,1 @@
-# javascript-blog
+ https://vilgefort.github.io/javascript-blog/
