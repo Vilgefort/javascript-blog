@@ -8,9 +8,10 @@
 }
 
 body {
-  background: #fff;
+  margin: 0;
+  background: #0d0b0b;
   font-family: "Source Sans Pro", sans-serif;
-  color: #444;
+  color: #fff;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.7;
@@ -26,6 +27,8 @@ body {
   text-transform: uppercase;
   font-family: "Oswald", sans-serif;
   font-weight: 600;
+  letter-spacing: 1px;
+  color: #ff0000;
 }
 
 .section-title span {
@@ -34,11 +37,22 @@ body {
   color: #777777;
 }
 
+a {
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  color: #ff0000;
+}
+
 /* Layout */
 .wrapper {
   display: -ms-flexbox;
   display: flex;
   margin-left: 10px;
+  margin-bottom: 20px;
 }
 
 .sidebar {
@@ -53,20 +67,36 @@ body {
 
 .sidebar,
 .posts {
-  background: #fff;
+  background: #292121;
   margin-right: 10px;
   padding: 40px;
-  border: 1px solid #444;
+  border: 2px solid #221919;
   border-radius: 5px;
 }
 
 /* Logo */
-.logo {
-  font-family: "Sacramento", cursive;
-  font-weight: 400;
-  font-size: 104px;
-  line-height: 1;
+.head {
+  position: relative;
+  background-image: url(../images/cinema-dark-display-8158.jpg);
+  background-position: center center;
+  background-size: cover;
+  height: 50vh;
+  margin-bottom: 5px;
+}
+
+.head .logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-family: "Montserrat", cursive;
+  font-weight: 800;
+  font-size: 5em;
+  line-height: 1.5;
+  letter-spacing: 3px;
   text-align: center;
+  color: #ff0000;
 }
 
 /* Lists */

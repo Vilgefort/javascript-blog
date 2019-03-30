@@ -4,8 +4,9 @@
 
 $color-light: #fff;
 $color-dark: #444;
+$color-red: #ff0000;
 
-$font-logo: "Sacramento", cursive;
+$font-logo: "Montserrat", cursive;
 $font-header: "Oswald", sans-serif;
 $font-text: "Source Sans Pro", sans-serif;
 
@@ -18,9 +19,10 @@ $font-text: "Source Sans Pro", sans-serif;
 }
 
 body {
-  background: $color-light;
+  margin: 0;
+  background: #0d0b0b;
   font-family: $font-text;
-  color: $color-dark;
+  color: $color-light;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.7;
@@ -36,10 +38,21 @@ body {
   text-transform: uppercase;
   font-family: $font-header;
   font-weight: 600;
+  letter-spacing: 1px;
+  color: $color-red;
   span {
     text-transform: none;
     font-weight: 400;
     color: lighten($color-dark, 20%);
+  }
+}
+
+a {
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: $color-light;
+  &:hover {
+    color: $color-red;
   }
 }
 
@@ -48,6 +61,7 @@ body {
 .wrapper {
   display: flex;
   margin-left: 10px;
+  margin-bottom: 20px;
 }
 
 .sidebar {
@@ -60,21 +74,35 @@ body {
 
 .sidebar,
 .posts {
-  background: $color-light;
+  background: #292121;
   margin-right: 10px;
   padding: 40px;
-  border: 1px solid $color-dark;
+  border: 2px solid #221919;
   border-radius: 5px;
 }
 
 /* Logo */
-
-.logo {
-  font-family: $font-logo;
-  font-weight: 400;
-  font-size: 104px;
-  line-height: 1;
-  text-align: center;
+.head {
+  position: relative;
+  background-image: url(../images/cinema-dark-display-8158.jpg);
+  background-position: center center;
+  background-size: cover;
+  height: 50vh;
+  margin-bottom: 5px;
+  .logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-family: $font-logo;
+    font-weight: 800;
+    font-size: 5em;
+    line-height: 1.5;
+    letter-spacing: 3px;
+    text-align: center;
+    color: $color-red;
+  }
 }
 
 /* Lists */
