@@ -2,10 +2,14 @@
 
 /* Variables */
 
+//Colors
 $color-light: #fff;
 $color-dark: #444;
 $color-red: #ff0000;
+$color-back: #292121;
+$color-border: #221919;
 
+//Fonts
 $font-logo: "Montserrat", cursive;
 $font-header: "Oswald", sans-serif;
 $font-text: "Source Sans Pro", sans-serif;
@@ -54,6 +58,9 @@ a {
   &:hover {
     color: $color-red;
   }
+  &.active {
+    color: $color-red;
+  }
 }
 
 /* Layout */
@@ -74,10 +81,10 @@ a {
 
 .sidebar,
 .posts {
-  background: #292121;
+  background: $color-back;
   margin-right: 10px;
   padding: 40px;
-  border: 2px solid #221919;
+  border: 2px solid $color-border;
   border-radius: 5px;
 }
 
@@ -97,8 +104,8 @@ a {
     margin: 0;
     font-family: $font-logo;
     font-weight: 800;
-    font-size: 5em;
-    line-height: 1.5;
+    font-size: 4.5em;
+    line-height: 1.2;
     letter-spacing: 3px;
     text-align: center;
     color: $color-red;
@@ -134,9 +141,16 @@ a {
 
 .post {
   display: none;
+  text-align: justify;
   &.active {
     display: block;
   }
+}
+.post-title {
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  font-size: 1.5em;
+  color: $color-red;
 }
 
 .post-author {
@@ -145,7 +159,72 @@ a {
 
 .post-tags {
   display: flex;
+  color: $color-red;
   p {
     margin: 0 10px 0 0;
+  }
+}
+
+//RWD
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .head {
+    .logo {
+      font-size: 4em;
+    }
+  }
+  .sidebar,
+  .posts {
+    padding: 20px;
+  }
+  .posts {
+    flex: 3 0 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .head {
+    .logo {
+      font-size: 2em;
+    }
+  }
+  .wrapper {
+    flex-direction: column;
+    .articles {
+      padding: 10px;
+      padding-bottom: 20px;
+      margin-bottom: 5px;
+      h2 {
+        text-align: center;
+      }
+      ul {
+        li {
+          display: inline-block;
+          width: 100px;
+          padding: 0 12px;
+          border: 2px solid $color-border;
+          text-align: center;
+        }
+      }
+    }
+    .posts {
+      padding: 25px;
+      margin-bottom: 5px;
+    }
+    .tag {
+      padding: 10px;
+      padding-left: 25px;
+      display: flex;
+      .row {
+        flex: 1;
+        justify-content: space-around;
+        .authors {
+          li {
+            margin: 0;
+            letter-spacing: initial;
+          }
+        }
+      }
+    }
   }
 }
