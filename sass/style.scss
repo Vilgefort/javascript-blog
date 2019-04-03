@@ -77,6 +77,8 @@ a {
 
 .posts {
   flex: 2 0 0;
+  position: relative;
+  overflow: hidden;
 }
 
 .sidebar,
