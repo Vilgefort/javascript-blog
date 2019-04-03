@@ -140,10 +140,16 @@ a {
 /* Post */
 
 .post {
-  display: none;
+  position: absolute;
+  display: block;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 1;
   text-align: justify;
   &.active {
-    display: block;
+    position: relative;
+    opacity: 1;
+    z-index: 2;
   }
 }
 .post-title {
