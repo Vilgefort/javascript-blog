@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald:400,600|Sacramento|Source+Sans+Pro:300&subset=latin-ext");
-
 /* Variables */
-
 //Colors
 $color-light: #fff;
 $color-dark: #444;
@@ -15,7 +13,6 @@ $font-header: "Oswald", sans-serif;
 $font-text: "Source Sans Pro", sans-serif;
 
 /* Global */
-
 *,
 *::before,
 *::after {
@@ -64,7 +61,6 @@ a {
 }
 
 /* Layout */
-
 .wrapper {
   display: flex;
   margin-left: 10px;
@@ -115,7 +111,6 @@ a {
 }
 
 /* Lists */
-
 .list {
   list-style-type: none;
   margin: 0;
@@ -132,7 +127,6 @@ a {
 }
 
 /* Authors */
-
 .authors {
   li {
     margin-bottom: 12px;
@@ -140,7 +134,6 @@ a {
 }
 
 /* Post */
-
 .post {
   position: absolute;
   display: block;
@@ -174,7 +167,6 @@ a {
 }
 
 //RWD
-
 @media (min-width: 768px) and (max-width: 991px) {
   .head {
     .logo {
