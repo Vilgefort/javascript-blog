@@ -166,7 +166,7 @@ a {
   }
 }
 
-//Tags
+//Tags&Authorsin side bar
 
 .tag {
   .tags {
@@ -187,6 +187,18 @@ a {
     .tag-size-2 {
       font-size: 1em;
       color: green;
+    }
+    .tag-size-1 {
+      font-size: 0.5em;
+      color: pink;
+    }
+  }
+  .authors {
+    font-family: $font-logo;
+    display: inline;
+    .tag-size-5 {
+      font-size: 2.5em;
+      color: black;
     }
     .tag-size-1 {
       font-size: 0.5em;
