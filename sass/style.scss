@@ -166,6 +166,35 @@ a {
   }
 }
 
+//Tags
+
+.tag {
+  .tags {
+    font-family: $font-logo;
+    display: inline;
+    .tag-size-5 {
+      font-size: 2.5em;
+      color: black;
+    }
+    .tag-size-4 {
+      font-size: 2em;
+      color: yellow;
+    }
+    .tag-size-3 {
+      font-size: 1.5em;
+      color: violet;
+    }
+    .tag-size-2 {
+      font-size: 1em;
+      color: green;
+    }
+    .tag-size-1 {
+      font-size: 0.5em;
+      color: pink;
+    }
+  }
+}
+
 //RWD
 @media (min-width: 768px) and (max-width: 991px) {
   .head {
@@ -208,6 +237,7 @@ a {
       }
     }
     .posts {
+      flex: 1;
       padding: 25px;
       margin-bottom: 5px;
     }

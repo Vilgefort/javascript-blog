@@ -321,7 +321,12 @@ function generateTags() {
     /* START LOOP: for each tag */
     for (let tag of articleTagsArray) {
       /* generate HTML of the link */
-      const linkHTML = '<li><a href="#tag-' + tag + '">' + tag + "</a></li>";
+      const linkHTML =
+        '<li><a onclick="tagClickHandler(event)" href="#tag-' +
+        tag +
+        '">' +
+        tag +
+        "</a></li>";
       console.log(linkHTML);
 
       /* add generated code to html variable */
@@ -345,7 +350,8 @@ function generateTags() {
   }
 
   /* [NEW] find list of tags in right column */
-  const tagList = document.querySelector(".tags");
+  const tagList = document.querySelector(".tag .tags");
+  console.log(tagList);
 
   //[NEW] create varible for all links HTML code
   const tagsParams = calculateTagsParams(allTags);

@@ -164,6 +164,36 @@ a.active {
   margin: 0 10px 0 0;
 }
 
+.tag .tags {
+  font-family: "Montserrat", cursive;
+  display: inline;
+}
+
+.tag .tags .tag-size-5 {
+  font-size: 2.5em;
+  color: black;
+}
+
+.tag .tags .tag-size-4 {
+  font-size: 2em;
+  color: yellow;
+}
+
+.tag .tags .tag-size-3 {
+  font-size: 1.5em;
+  color: violet;
+}
+
+.tag .tags .tag-size-2 {
+  font-size: 1em;
+  color: green;
+}
+
+.tag .tags .tag-size-1 {
+  font-size: 0.5em;
+  color: pink;
+}
+
 @media (min-width: 768px) and (max-width: 991px) {
   .head .logo {
     font-size: 4em;
@@ -202,6 +232,8 @@ a.active {
     text-align: center;
   }
   .wrapper .posts {
+    -ms-flex: 1;
+        flex: 1;
     padding: 25px;
     margin-bottom: 5px;
   }
