@@ -10,7 +10,9 @@ const opts = {
   CloudClassPrefix: "tag-size-",
   AuthorsListSelector: ".tag .authors ",
   AuthorList: ".post-author",
-  TagsListSelector: ".tags .list"
+  TagsListSelector: ".tag .tags",
+  LinkTags: ".post-tags a",
+  linkAuthors: ".post-author a"
 };
 
 //Function titleClick Handler
@@ -192,7 +194,7 @@ function generateAuthors() {
     // [NEW] generate code of a link and add it to allTagsHTML
 
     const authorLinkHTML =
-      '<a href="#author-' +
+      '<li><a onclick="tagClickHandler(event)" href="#author-' +
       authors +
       '" class="' +
       calculateTagClass(allAuthors[authors], authorsParams) +
@@ -265,7 +267,7 @@ function authorClickHandler(event) {
 function addClickListenersToAuthors() {
   /* find all links to authors */
 
-  const linkAuthors = document.querySelectorAll(".post-author a");
+  const linkAuthors = document.querySelectorAll(opts.linkAuthors);
 
   /* START LOOP: for each link */
 
@@ -361,7 +363,7 @@ function tagClickHandler(event) {
 function addClickListenersToTags() {
   /* find all links to tags */
 
-  const linkTags = document.querySelectorAll(".post-tags a");
+  const linkTags = document.querySelectorAll(opts.LinkTags);
 
   /* START LOOP: for each link */
 
@@ -441,7 +443,7 @@ function generateTags() {
 
   /* [NEW] find list of tags in right column */
 
-  const tagList = document.querySelector(".tag .tags");
+  const tagList = document.querySelector(opts.TagsListSelector);
   console.log(tagList);
 
   //[NEW] create varible for all links HTML code
@@ -457,7 +459,7 @@ function generateTags() {
     // [NEW] generate code of a link and add it to allTagsHTML
 
     const tagLinkHTML =
-      '<a href="#tag-' +
+      '<li><a onclick="tagClickHandler(event)" href="#tag-' +
       tag +
       '" class="' +
       calculateTagClass(allTags[tag], tagsParams) +
