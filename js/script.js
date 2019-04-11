@@ -67,7 +67,8 @@ function generateTitleLinks(customSelector = "") {
   titleList.innerHTML = "";
 
   const articles = document.querySelectorAll(
-    opts.ArticleSelector + customSelector
+    opts.ArticleSelector,
+    customSelector
   );
 
   let html = "";
